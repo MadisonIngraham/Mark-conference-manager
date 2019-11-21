@@ -32,4 +32,16 @@ export default class SessionsController {
     formData.reset();
     _drawSessions();
   }
+
+  createNewSession(event) {
+    event.preventDefault();
+    let formData = event.target;
+    let newSession = {
+      name: formData.title.value,
+      speakers: []
+    };
+    SessionsService.createNewSession(newSession);
+    formData.reset();
+    _drawSessions();
+  }
 }

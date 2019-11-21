@@ -17,24 +17,9 @@ let _state = {
       name: "HTML",
       speakers: []
     }),
-    //HARD CODED Nested children
     new Session({
-      id: "4",
       name: "OOP",
-      speakers: [
-        new Speaker({
-          name: "Ben",
-          sessionId: "4",
-          topic: "Encapsulation",
-          time: "12:00"
-        }),
-        new Speaker({
-          name: "JD",
-          sessionId: "4",
-          topic: "Classes",
-          time: "11:00"
-        })
-      ]
+      speakers: []
     })
   ]
 };

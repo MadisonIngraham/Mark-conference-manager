@@ -1,5 +1,6 @@
 import Speaker from "../Models/Speaker.js";
 import store from "../store.js";
+import Session from "../Models/Session.js";
 
 class SessionsService {
   //NOTE this will add a speaker to a session
@@ -7,6 +8,12 @@ class SessionsService {
     let speaker = new Speaker(newSpeaker);
     let session = store.State.sessions.find(s => s.id == speaker.sessionId);
     session.speakers.push(speaker);
+    store.saveState();
+  }
+
+  createNewSession(newSession) {
+    let created = new Session(newSession);
+    store.State.sessions.push(created);
     store.saveState();
   }
 

@@ -24,6 +24,25 @@
       <div id="sessions" class="row p-3 justify-content-around">
         <!-- example sessions lets get these dynamically drawing on the screen -->
       </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <form onsubmit="app.sessionsController.createNewSession(event)">
+            <div class="form-group">
+              <label for="title">Title of New Session</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="Enter session title here..."
+              />
+            </div>
+
+            <button class="btn btn-primary btn-lg m-3" type="submit">
+              Create New Session
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <script src="app/main.js" type="module"></script>
