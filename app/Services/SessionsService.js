@@ -27,6 +27,12 @@ class SessionsService {
     sessionToRemoveSpeakerFrom.speakers.splice(speakerIndex, 1);
     store.saveState();
   }
+
+  removeSession(sessionId) {
+    let sessionToRemove = store.State.sessions.find(s => s.id == sessionId);
+    store.State.sessions.splice(sessionId, 1);
+    store.saveState();
+  }
 }
 
 const SESSIONSERVICE = new SessionsService();

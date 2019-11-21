@@ -38,6 +38,10 @@ export default class Session {
           />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        
+        <button class="btn btn-outline btn-danger" onclick="app.sessionsController.removeSession('${
+          this.id
+        }')">Delete</button>
       </form>
     </div>
     `;

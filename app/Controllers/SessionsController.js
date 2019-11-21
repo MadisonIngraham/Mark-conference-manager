@@ -19,6 +19,11 @@ export default class SessionsController {
     _drawSessions();
   }
 
+  removeSession(sessionId) {
+    SessionsService.removeSession(sessionId);
+    _drawSessions();
+  }
+
   addSpeaker(event, sId) {
     event.preventDefault();
     let formData = event.target;
